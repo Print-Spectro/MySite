@@ -1,0 +1,52 @@
+{% extends "main/header.html" %}
+
+{% block content %}
+<head>
+    <title>Angelo Davis Homepage</title>
+</head>
+
+
+<style>
+    body {
+        background-image: url('static/main/images/Homepage.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: 50% 65%;
+    }
+    .card{
+        background: rgba(255, 179, 0, 0.6)
+    }
+
+    </style>
+
+<script src="https://unpkg.com/htmx.org@1.9.0"></script>
+<!-- have a button POST a click via AJAX -->
+<button hx-post="/clicked" hx-swap="outerHTML">
+  Button
+</button>
+
+
+<div class="row">
+    
+    {% for vid in videos %}   
+
+        <div class="col s12 m6 l4">
+            
+            <div class="card">
+            
+            <div class="card-content white-text">
+                <span class="card-title">{{vid.video_title}}</span>
+                <p style="font-size:70%">{{vid.video_published}}</p>
+                <p>{{vid.video_content|safe}}</p>
+            </div>
+            <div class="card-action">
+                <a href="https://www.youtube.com/channel/UCzPB5mj8wIfguZIzCV7w4kA">Visit</a>
+            
+            </div>
+            </div>
+        </div>
+    {% endfor %}
+</div>
+
+{% endblock %}
