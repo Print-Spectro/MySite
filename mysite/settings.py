@@ -25,7 +25,7 @@ SECRET_KEY = "django-insecure-3+p3ffxy@e*%!!nj8)^_3_4rj8&tc77=i@a$o7%^86_zx1^%do
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [".vercel.app"]
 
 TINYMCE_DEFAULT_CONFIG = {
     'height': 360,
