@@ -12,7 +12,7 @@ class Video(models.Model):
 class Artwork(models.Model):
     art_title = models.CharField(max_length = 200)
     art_published = models.DateTimeField("date published", default=datetime.now())
-    art_image = models.ImageField()
+    art_image = models.ImageField(upload_to = "main/static/main/images/artwork")
 
     def __str__(self):
         return self.art_title

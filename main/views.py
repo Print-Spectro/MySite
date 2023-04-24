@@ -13,4 +13,5 @@ def homepage(request):
 def artwork(request):
     return render(request,
                   "main/artwork.html",
-                  {"artwork": Artwork.objects.all})
+                  {"artwork": Artwork.objects.all,
+                   })

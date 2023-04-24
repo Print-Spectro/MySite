@@ -1,5 +1,6 @@
 from django.contrib import admin
 from .models import Video
+from .models import Artwork
 from tinymce.widgets import TinyMCE
 from django.db import models
 
@@ -19,4 +20,8 @@ class VideoAdmin(admin.ModelAdmin):
 
     }
 
+class ArtAdmin(admin.ModelAdmin):
+    """fields = [art_title, "art_image", "date_published"]"""
+
 admin.site.register(Video, VideoAdmin)
+admin.site.register(Artwork, ArtAdmin)

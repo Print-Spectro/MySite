@@ -8,66 +8,65 @@
 
 <style>
     body {
-        background-image: url('static/main/images/Homepage.png');
+        background-image: url('static/main/images/background/Homepage.png');
         background-size: cover;
         background-repeat: no-repeat;
         background-attachment: fixed;
         background-position: 50% 65%;
     }
     .card{
-        background: rgba(255, 179, 0, 0.6)
+        background: rgba(255, 179, 0, 0.5)
     }
 
     </style>
 
-<script src="https://unpkg.com/htmx.org@1.9.0"></script>
-<!-- have a button POST a click via AJAX -->
-<button hx-post="/clicked" hx-swap="outerHTML">
-  Button
-</button>
 
+    <div class="row">
+        <! youtube button >
+        <div class="col s12 m6 l4">
+            
+            <div class="card">
 
-<div class="row">
-       
+            <div class="card-content black-text">
+                <a href="/artwork/">
 
-    <div class="col s12 m6 l4">
+                </a>
+                <span class="card-title" style = "font-size:150%">My youtube channel</span>
+                <div class ="card-image">
+                    <img class ="responsive-img" src="/static/main/images/icons/youtube.png" style="width:400px">
+                    <br>
+                    <p style="font-size:100%">Here I post vlogs, educational videos and gaming edits</p>
+
+                </div>
+                <div class="card-action">
+                <a href="https://www.youtube.com/channel/UCzPB5mj8wIfguZIzCV7w4kA">Visit</a>
+                </div>
+            </div>
+        </div>
         
-        <div class="card">
-
-        <div class="card-content white-text">
-            <span class="card-title">My youtube channel</span>
-            <div class ="card-image">
-                <img class ="responsive-img" src="/static/main/images/icons/youtube.png" style="width:300px">
-            <br>
-            <p style="font-size:70%">Here I post vlogs, educational videos and gaming edits</p>
-
-        </div>
-        <div class="card-action">
-            <a href="https://www.youtube.com/channel/UCzPB5mj8wIfguZIzCV7w4kA">Visit</a>
         
-        </div>
-        </div>
     </div>
-    
+    <!link to artwork page>
     <div class="col s12 m6 l4">
         
         <div class="card">
 
-        <div class="card-content white-text">
+        <div class="card-content black-text">
             <span class="card-title">My vector art</span>
             <div class ="card-image">
-                <img class ="responsive-img" src="/static/main/images/icons/Jeep.png" style="width:400px">
+                <img class ="responsive-img" src="/static/main/images/icons/Jeep.png" style="width:500px">
             <br>
-            <p style="font-size:70%">check out some of my vector artwork</p>
+            <p style="font-size:100%">check out some of my vector artwork</p>
 
         </div>
         <div class="card-action">
-            <a href="https://angelodavis.crevado.com/">Visit</a>
+            <a href="/artwork/">Visit</a>
         
         </div>
         </div>
     </div>
 
+ 
 </div>
 
 {% endblock %}
